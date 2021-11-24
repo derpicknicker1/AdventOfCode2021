@@ -1,6 +1,6 @@
 # :sparkles: :santa: AdventOfCode2020 :christmas_tree: :candle: 
 
-Solutions for [Advent Of Code 2020](http://adventofcode.com/2020) written in **C**
+Solutions for [Advent Of Code 2020](http://adventofcode.com/2021) written in **C**
 
 The descriptions of the daily tasks are in the comments in the `*.c` files (see `src/`).
 
@@ -10,7 +10,7 @@ The `*.txt` files in `input/` contain the original input for the tasks.
 
 Use GCC to build `main.c` with the makefile provided.
 
-![C/C++ CI](https://github.com/derpicknicker1/AdventOfCode2020/workflows/C/C++%20CI/badge.svg)
+![C/C++ CI](https://github.com/derpicknicker1/AdventOfCode2021/workflows/C/C++%20CI/badge.svg)
 ## Building in SublimeText3 (Win)
 
 * Install Mingw
