@@ -1,6 +1,6 @@
-# :sparkles: :santa: AdventOfCode2020 :christmas_tree: :candle: 
+# :sparkles: :santa: AdventOfCode2021 :christmas_tree: :candle: 
 
-Solutions for [Advent Of Code 2020](http://adventofcode.com/2021) written in **C**
+Solutions for [Advent Of Code 2021](http://adventofcode.com/2021) written in **C**
 
 The descriptions of the daily tasks are in the comments in the `*.c` files (see `src/`).
 

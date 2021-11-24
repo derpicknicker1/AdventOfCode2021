@@ -15,23 +15,23 @@ static int getInput(char *f) {
     size_t l = 0;
 
 	FILE *file=fopen(f, "r");
-	if(file == NULL) {
+	if (file == NULL) {
 		printf("ERR: CAN NOT OPEN '%s'\n\n", f);
-		return 0;
+		return false;
 	}
 	
 	// This is a example for reading ONE line from file.
 	// Change it to the needed method (multiline, nodes, etc.)
-	if( getline(&line, &l, file) != -1 ) {
+	if (getline(&line, &l, file) != -1 ) {
 		input = (char*)realloc(input, strlen(line) + 1);
 		strcpy(input,line);
 	}
 	else 
-		return 0;
+		return false;
 
 	free(line);
 	fclose(file);
-	return 1;
+	return true;
 }
 
 
@@ -40,7 +40,7 @@ static int getInput(char *f) {
 ##########################*/
 void get0a(char * f) {
 
-	if(!getInput(f))
+	if (!getInput(f))
 		return;
 
 	/* Process data for part A here */
@@ -57,7 +57,7 @@ void get0a(char * f) {
 ##########################*/
 void get0b(char *f) {
 
-	if(!getInput(f))
+	if (!getInput(f))
 		return;
 
 	/* Process data for part B here */	
