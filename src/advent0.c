@@ -4,15 +4,13 @@ PLACE INSTRUCTIONS HERE
 
 #include "advent.h"
 
-static char *input = NULL;
+static char input[30];
 
 
 /*##########################
 # Get input data from file #
 ##########################*/
 static int getInput(char *f) {
-	char * line = NULL;
-    size_t l = 0;
 
 	FILE *file=fopen(f, "r");
 	if (file == NULL) {
@@ -22,16 +20,15 @@ static int getInput(char *f) {
 	
 	// This is a example for reading ONE line from file.
 	// Change it to the needed method (multiline, nodes, etc.)
-	if (getline(&line, &l, file) != -1 ) {
-		input = (char*)realloc(input, strlen(line) + 1);
-		strcpy(input,line);
+	if (fscanf(file,"%[^\n]",input) ) {
+		fclose(file);
+		return true;
 	}
-	else 
+	else {
+		fclose(file);
 		return false;
+	}
 
-	free(line);
-	fclose(file);
-	return true;
 }
 
 
@@ -47,8 +44,6 @@ void get0a(char * f) {
 
 	printf("0a: %s\n", input);
 
-	free(input);
-	input = NULL;
 }
 
 
@@ -64,6 +59,4 @@ void get0b(char *f) {
 	
 	printf("0b: %s\n\n", input);
 
-	free(input);
-	input = NULL;
 }

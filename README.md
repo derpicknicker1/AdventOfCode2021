@@ -41,8 +41,8 @@ Use GCC to build `main.c` with the makefile provided.
 * Build with <kbd>Ctrl</kbd> + <kbd>B</kbd>
   * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to choose variant (e.g _run_)
 
-  ## Snippet
-  All solutions have the same base structure.
-  There is a snippet for SublimeText to generate this basic structure.
-  Just type `AOC` and hit <kbd>Tab</kbd> to insert the basic code.
-  To use it, place `AOC.sublime-snippet` in `C:\Users\<UserName>\AppData\Roaming\Sublime Text 3\Packages\User`
+## Snippet
+All solutions have the same base structure.
+There is a snippet for SublimeText to generate this basic structure.
+Just type `AOC` and hit <kbd>Tab</kbd> to insert the basic code.
+To use it, place `AOC.sublime-snippet` in `C:\Users\<UserName>\AppData\Roaming\Sublime Text 3\Packages\User`
