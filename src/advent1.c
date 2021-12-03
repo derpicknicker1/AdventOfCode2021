@@ -90,10 +90,10 @@ static int *val;
 # Get input data from file #
 ##########################*/
 static int getInput(char *f) {
-	char * line = NULL;
-	size_t l;
+	int in;
 	val = NULL;
 	cnt = 0;
+	
 
 	FILE *file = fopen(f, "r");
 	if (file == NULL) {
@@ -101,12 +101,11 @@ static int getInput(char *f) {
 		return false;
 	}
 
-	while ( getline(&line, &l, file) != -1) {
+	while ( fscanf(file, "%d", &in) != EOF) {
 		val = realloc(val, ++cnt * sizeof(int));
-		val[cnt-1] = atoi(line);
+		val[cnt-1] = in;
 	}
 
-	free(line);
 	fclose(file);
 	return true;
 }
