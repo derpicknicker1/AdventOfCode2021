@@ -67,12 +67,10 @@ static int cnt;
 # Get input data from file #
 ##########################*/
 static int getInput(char *f) {
-	char line[100];
-	size_t l;
+	int res;
 	arr = NULL;
 	cmd = NULL;
 	cnt = 0;
-	int res;
 
 	FILE *file = fopen(f, "r");
 	if (file == NULL) {
@@ -86,7 +84,6 @@ static int getInput(char *f) {
 		res = fscanf(file, "%c%*s %d\n", &cmd[cnt-1], &arr[cnt-1] );
 	} while (res != EOF);
 
-	free(line);
 	fclose(file);
 	return true;
 }
