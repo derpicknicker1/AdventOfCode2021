@@ -53,5 +53,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: make
+      run: make
     - name: main
       run: ./main.exe skip
