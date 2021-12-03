@@ -99,7 +99,6 @@ static int getInput(char *f, int ab) {
 		
 	}
 
-	free(line);
 	fclose(file);
 	return true;
 }
