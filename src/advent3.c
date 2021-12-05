@@ -76,7 +76,7 @@ static int cnt;
 /*##########################
 # Get input data from file #
 ##########################*/
-static int getInput(char *f, int ab) {
+static bool getInput(char *f, int ab) {
 	char line[100];
 	cnt = 0;
 	val = NULL;
@@ -103,7 +103,7 @@ static int getInput(char *f, int ab) {
 	return true;
 }
 
-int solveB(int mode) {
+int solveB(bool mode) {
 	int pos = -1, out[cnt], found;
 	memset(out, false, cnt * sizeof(int));
 

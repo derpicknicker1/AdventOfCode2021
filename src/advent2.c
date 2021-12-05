@@ -66,7 +66,7 @@ static int cnt;
 /*##########################
 # Get input data from file #
 ##########################*/
-static int getInput(char *f) {
+static bool getInput(char *f) {
 	int res;
 	arr = NULL;
 	cmd = NULL;
@@ -88,7 +88,7 @@ static int getInput(char *f) {
 	return true;
 }
 
-int calc(int lvl2) {
+int calc(bool lvl2) {
 	int fw = 0, d = 0, a = 0;
 	for (int i = 0; i < cnt; i++) {
 		switch (cmd[i]) {

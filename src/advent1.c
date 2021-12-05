@@ -89,7 +89,7 @@ static int *val;
 /*##########################
 # Get input data from file #
 ##########################*/
-static int getInput(char *f) {
+static bool getInput(char *f) {
 	int in;
 	val = NULL;
 	cnt = 0;

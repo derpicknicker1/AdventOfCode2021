@@ -13,6 +13,7 @@
 #define INRANGE(x, y, z) ((x) >= (y) && (x) <= (z))
 #define true 1
 #define false 0
+typedef uint8_t bool;
 
 // Helper
 int toI(char *s);
