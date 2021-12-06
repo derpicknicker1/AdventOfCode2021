@@ -11,8 +11,7 @@ clock_t begin;
 void getTime(int i) {
 	double timeSpent = (double)(clock() - begin) / CLOCKS_PER_SEC;
 	printf("Runtime %d: %.3f\n_______________________________\n\n", i, timeSpent);
-	begin = clock();
-	
+	begin = clock();	
 }					
 
 int main(int argc, char* argv[]) {
@@ -27,8 +26,8 @@ int main(int argc, char* argv[]) {
 	execute(2)
 	execute(3)
 	execute(4)
-	/*execute(5)
-	execute(6)
+	execute(5)
+	/*execute(6)
 	execute(7)
 	execute(8)
 	execute(9)
@@ -51,7 +50,7 @@ int main(int argc, char* argv[]) {
 	*/
 	double timeSpent = (double)(clock() - beginAll) / CLOCKS_PER_SEC;
 	printf("Overall Runtime: %.3f\n_______________________________\n", timeSpent);
-	if(argc < 2 || strcmp(argv[1],"skip") != 0)
+	if (argc < 2 || strcmp(argv[1],"skip") != 0)
 		system("Pause");
 
 	return 0;

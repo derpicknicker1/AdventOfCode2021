@@ -88,7 +88,7 @@ static bool getInput(char *f) {
 	return true;
 }
 
-int calc(bool lvl2) {
+static int calc(bool lvl2) {
 	int fw = 0, d = 0, a = 0;
 	for (int i = 0; i < cnt; i++) {
 		switch (cmd[i]) {

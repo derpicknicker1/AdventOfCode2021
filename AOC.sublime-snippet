@@ -11,9 +11,8 @@ static int cnt;
 /*##########################
 # Get input data from file #
 ##########################*/
-static int getInput(char *f) {
-	char * line = NULL;
-	size_t l;
+static bool getInput(char *f) {
+	char line[1000];
 	arr = NULL;
 	cnt = 0;
 
@@ -23,11 +22,10 @@ static int getInput(char *f) {
 		return false;
 	}
 
-	while (getline(&line, &l, file) != -1) {
+	while (fscanf(file, "%[^\n] ", line) != EOF) {
 	
 	}
 
-	free(line);
 	fclose(file);
 	return true;
 }

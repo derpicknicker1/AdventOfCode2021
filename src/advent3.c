@@ -103,7 +103,7 @@ static bool getInput(char *f, int ab) {
 	return true;
 }
 
-int solveB(bool mode) {
+static int solveB(bool mode) {
 	int pos = -1, out[cnt], found;
 	memset(out, false, cnt * sizeof(int));
 

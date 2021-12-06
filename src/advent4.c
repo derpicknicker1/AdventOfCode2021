@@ -112,7 +112,7 @@ static bool getInput(char *f) {
 	return true;
 }
 
-int solve(bool ab) {
+static int solve(bool ab) {
 	int result = 0, boards = cnt;
 
 	for(int i = 0; i < cntVal && boards > 0; i++) {
