@@ -4,7 +4,7 @@
 #include <stdio.h>
 //#include <math.h>
 #include <time.h>
-//#include <limits.h>
+#include <limits.h>
 #include <ctype.h>
 //#include <assert.h>
 
@@ -24,6 +24,7 @@ char *rtrim(char *s);
 char *trim(char *s);
 int isDigit(char c);
 int isHexDigit(char c);
+int gauss(int n);
 
 // Day 0 EXAMPLE
 void get0a(char *f);

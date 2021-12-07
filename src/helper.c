@@ -1,5 +1,9 @@
 #include "advent.h"
 
+int gauss(int n) {
+	return ((n*n)+n)/2;
+}
+
 int toI(char *s) {
 	int sum = 0, min = false;
 	if(*s == '-') {
