@@ -52,8 +52,10 @@ int main(int argc, char* argv[]) {
 	*/
 	double time = (end.tv_nsec-beginAll.tv_nsec)/1000000000.0+(end.tv_sec-beginAll.tv_sec);
 	printf("Overall Runtime: %f\n_______________________________\n", time);
+	#if defined(_WIN32) || defined(_WIN64)
 	if (argc < 2 || strcmp(argv[1],"skip") != 0)
 		system("Pause");
+	#endif
 
 	return 0;
 }
