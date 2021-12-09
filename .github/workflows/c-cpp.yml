@@ -38,5 +38,16 @@ jobs:
     - uses: actions/checkout@v2
     - name: make
       run: make
-    - name: main
+    - name: run
       run: ./main.exe skip
+
+  build_run_macos:
+
+    runs-on: macOS-latest
+
+    steps:
+   - uses: actions/checkout@v2
+    - name: make
+      run: make
+    - name: run
+      run: ./main     
