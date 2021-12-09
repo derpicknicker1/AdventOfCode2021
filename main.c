@@ -6,21 +6,23 @@
 					get##s##b("input/" #s ".txt");	\
 					getTime(s);
 
-clock_t begin;
+
+struct timespec begin, beginAll, end;
 
 void getTime(int i) {
-	double timeSpent = (double)(clock() - begin) / CLOCKS_PER_SEC;
-	printf("Runtime %d: %.3f\n_______________________________\n\n", i, timeSpent);
-	begin = clock();	
+	clock_gettime(CLOCK_MONOTONIC, &end);
+	double time = (end.tv_nsec-begin.tv_nsec)/1000000000.0+(end.tv_sec-begin.tv_sec);
+	printf("Runtime %d: %f\n_______________________________\n\n", i, time);
+	clock_gettime(CLOCK_MONOTONIC, &begin);
 }					
 
 int main(int argc, char* argv[]) {
 	
 	printf("\n\n#################\n### Solutions ###\n#################\n\n");
 
-	clock_t beginAll = clock();
-	begin = clock();
-
+	clock_gettime(CLOCK_MONOTONIC, &beginAll);
+	clock_gettime(CLOCK_MONOTONIC, &begin);
+	
 	// execute(0) // EXAMPLE
 	execute(1)
 	execute(2)
@@ -30,8 +32,8 @@ int main(int argc, char* argv[]) {
 	execute(6)
 	execute(7)
 	execute(8)
-	/*execute(9)
-	execute(10)
+	execute(9)
+	/*execute(10)
 	execute(11)
 	execute(12)
 	execute(13)
@@ -48,8 +50,8 @@ int main(int argc, char* argv[]) {
 	execute(24)
 	execute(25)
 	*/
-	double timeSpent = (double)(clock() - beginAll) / CLOCKS_PER_SEC;
-	printf("Overall Runtime: %.3f\n_______________________________\n", timeSpent);
+	double time = (end.tv_nsec-beginAll.tv_nsec)/1000000000.0+(end.tv_sec-beginAll.tv_sec);
+	printf("Overall Runtime: %f\n_______________________________\n", time);
 	if (argc < 2 || strcmp(argv[1],"skip") != 0)
 		system("Pause");
 
