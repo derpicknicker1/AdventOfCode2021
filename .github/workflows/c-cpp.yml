@@ -34,7 +34,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: make
-      run: make
+      run: make FOO=-lm
 
   build_run_linux:
 
@@ -43,7 +43,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: make
-      run: make
+      run: make FOO=-lm
     - name: run
       run: ./main skip
 
