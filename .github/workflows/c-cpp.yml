@@ -8,6 +8,19 @@ on:
 
 jobs:
 
+  upload-release:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/download-artifact@v2
+      with:
+        name: bin-artifact
+    - name: Display structure of downloaded files
+      run: ls -R
+
+
   build_run_linux_sp:
 
     runs-on: ubuntu-latest
@@ -29,6 +42,10 @@ jobs:
       run: make
     - name: run
       run: ./main
+    - uses: actions/upload-artifact@v2
+      with:
+        name: bin-artifact
+        path: ./main
 
   build_run_win:
 
@@ -40,14 +57,8 @@ jobs:
       run: make
     - name: main
       run: ./main.exe skip
-
-  build_run_macos:
-
-    runs-on: macOS-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: make
-      run: make
-    - name: run
-      run: ./main     
+    - uses: actions/upload-artifact@v2
+      with:
+        name: bin-artifact
+        path: ./main.exe
+  
