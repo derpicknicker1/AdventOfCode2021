@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
-//#include <math.h>
+#include <math.h>
 #include <time.h>
 #include <limits.h>
 #include <ctype.h>
