@@ -38,7 +38,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: make
       run: make
-    - name: run
+    - name: main
       run: ./main.exe skip
 
   build_run_macos:
