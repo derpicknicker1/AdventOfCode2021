@@ -4,7 +4,7 @@ INCLUDES := -I "src/"
 PROG := main
 CFLAGS := $(INCLUDES) $(FOO) -lm
 MAP_FILE :=$(PROG).map
-LDFLAGS :=  -Xlinker -Map=$(MAP_FILE)
+LDFLAGS :=  -Xlinker -Map=$(MAP_FILE) -lm
 
 CC := gcc
 LD := ld
