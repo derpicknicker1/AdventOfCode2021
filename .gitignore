@@ -17,6 +17,7 @@ $RECYCLE.BIN/
 src/*.exe
 src/*.o
 *.o
+*.exe
 *.sublime-p*
 *.sublime-w*
 *.bk*
