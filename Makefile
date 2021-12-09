@@ -2,7 +2,7 @@ CFILES := $(wildcard *.c src/*.c)
 INCLUDES := -I "src/"
 
 PROG := main
-CFLAGS := $(INCLUDES) $(FOO)
+CFLAGS := $(INCLUDES) $(FOO) -lm
 MAP_FILE :=$(PROG).map
 LDFLAGS :=  -Xlinker -Map=$(MAP_FILE)
 
