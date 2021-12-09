@@ -18,7 +18,7 @@ OBJECTS := $(CFILES:.c=.o)
 
 $(PROG) : $(OBJECTS)
 	@echo 'Linking: $@'
-	@$(CC) $(LDFLAGS) -o $@ $^ 
+	@$(CC) -o $@ $^ $(LDFLAGS)
 
 all: $(PROG)
 
