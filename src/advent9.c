@@ -66,17 +66,14 @@ Your puzzle answer was 1071000.
 */
 #include "advent.h"
 
-static char *arr;
-static int width, height, resultA, resultB;
+static char *arr = NULL;
+static int width = 0, height = 0, resultA = 0, resultB = 0;
 
 /*##########################
 # Get input data from file #
 ##########################*/
 static bool getInput(char *f) {
 	char in;
-	arr = NULL;
-	width = 0;
-	height = 0;
 
 	FILE *file = fopen(f, "r");
 	if (file == NULL) {
@@ -87,6 +84,8 @@ static bool getInput(char *f) {
 	while (fscanf(file, "%c", &in) != EOF) {
 		if(in == '\n')
 			++height;
+		else if (in =='\r')
+			printf("ERR");
 		else {
 			arr = realloc(arr, ++width * sizeof(char));
 			arr[width-1] = in;
@@ -129,8 +128,8 @@ static void solve() {
 				bas[cntBas-1] = follow(y,x);
 			}
 	qsort(bas, cntBas, sizeof(int), cmpfunc);
-    resultB = bas[0] * bas[1] * bas[2]; 
-    free(bas);
+	resultB = bas[0] * bas[1] * bas[2]; 
+	free(bas);
 }
 
 /*##########################
