@@ -14,11 +14,11 @@ OBJECTS := $(CFILES:.c=.o)
 
 %.o : %.c
 	@echo 'Building file: $<'
-	@$(CC) -c $(CFLAGS) -o $@ $< 
+	@$(CC) -c $(CFLAGS) -o $@ $< -static
 
 $(PROG) : $(OBJECTS)
 	@echo 'Linking: $@'
-	@$(CC) -o $@ $^ $(LDFLAGS)
+	@$(CC) -o $@ $^ $(LDFLAGS) -static
 
 all: $(PROG)
 
