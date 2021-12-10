@@ -2,12 +2,16 @@
 
 #define execute(s) 	printf("Solving %d...\n", s); 	\
 					fflush(stdout); 				\
-					get##s##a("input/" #s ".txt"); 	\
-					get##s##b("input/" #s ".txt");	\
+					strcpy(path,folder);            \
+					strcat(path, "/" #s ".txt");    \
+					get##s##a(path); 	            \
+					get##s##b(path);	            \
 					getTime(s);
 
 
 struct timespec begin, beginAll, end;
+char folder[10], path[20];
+bool sample = false, skip = false;
 
 void getTime(int i) {
 	clock_gettime(CLOCK_MONOTONIC, &end);
@@ -17,6 +21,15 @@ void getTime(int i) {
 }					
 
 int main(int argc, char* argv[]) {
+	for (int i = 1; i < argc; i++) {
+		if (strcmp(argv[i],"sample") == 0) sample = true;
+		if (strcmp(argv[i],"skip") == 0) skip = true;
+	}
+
+	strcpy(folder,"input");
+	if (sample)
+		strcpy(folder,"samples");
+		
 	
 	printf("\n\n#################\n### Solutions ###\n#################\n\n");
 
@@ -33,12 +46,12 @@ int main(int argc, char* argv[]) {
 	execute(7)
 	execute(8)
 	execute(9)
-	/*execute(10)
-	execute(11)
+	execute(10)
+	/*execute(11)
 	execute(12)
 	execute(13)
-	execute(15)
 	execute(14)
+	execute(15)
 	execute(16)
 	execute(17)
 	execute(18)
@@ -53,7 +66,7 @@ int main(int argc, char* argv[]) {
 	double time = (end.tv_nsec-beginAll.tv_nsec)/1000000000.0+(end.tv_sec-beginAll.tv_sec);
 	printf("Overall Runtime: %f\n_______________________________\n", time);
 	#if defined(_WIN32) || defined(_WIN64)
-	if (argc < 2 || strcmp(argv[1],"skip") != 0)
+	if (!skip)
 		system("Pause");
 	#endif
 

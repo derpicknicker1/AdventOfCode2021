@@ -114,7 +114,7 @@ static int follow(unsigned int y, unsigned int x) {
 	return ret + 1;
 }
 
-int cmpfunc (const void * a, const void * b) {
+static int cmpfunc (const void * a, const void * b) {
    return ( *(int*)b - *(int*)a );
 }
 

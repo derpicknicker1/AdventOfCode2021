@@ -1,16 +1,20 @@
 {
-"shell_cmd" : "make",
-"working_dir" : "${folder}",
+  "shell_cmd": "make",
+  "working_dir": "$folder",
  
-"variants":
-[
-	{
-		"name": "Run",
-		"shell_cmd": "make FOO=-fno-stack-protector && ${folder}/main.exe skip"
-	},
-	{
-		"name": "Clean",
-		"shell_cmd": "make clean"
-	}
-]
+  "variants": 
+  [
+      {
+          "name": "Run",
+          "shell_cmd": "make && ${folder}/main.exe skip"
+      },
+      {
+          "name": "Run Sample",
+          "shell_cmd": "make && ${folder}/main.exe skip sample"
+      },
+      {
+          "name": "Clean",
+          "shell_cmd": "make clean"
+      }
+  ]
 }
