@@ -43,6 +43,27 @@ Use GCC to build `main.c` with the makefile provided.
 
 ## Snippet
 All solutions have the same base structure.
+
 There is a snippet for SublimeText to generate this basic structure.
+
 Just type `AOC` and hit <kbd>Tab</kbd> to insert the basic code.
+
 To use it, place `AOC.sublime-snippet` in `C:\Users\<UserName>\AppData\Roaming\Sublime Text 3\Packages\User`
+
+## GIT
+Auto-generate a release with the workflow found in `.github/workflows/`
+```
+git tag -a v* -m "My_Msg"
+git push
+```
+
+##Main executeable
+To solve puzzles, put the input data given by the calendar in a txt file for each day(e.g. `3.txt` for Day 3).
+
+Place the txt files in an fodler called `input`. The folder must be under the same path as the main executeable.
+
+The same can be done for the samples of each puzzle in a folder named `samples`.
+
+run `main` to solve the puzzles with the data from `input` folder.
+
+run `main sample` to solve the puzzles with the data from `samples` folder.
