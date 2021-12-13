@@ -9,21 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # - uses: k2bd/advent-readme-stars@v1
-      #   with:
-      #     userId: ${{ secrets.UID }}
-      #     leaderboardId: ${{ secrets.AOC_LEADERBOARD }}
-      #     sessionCookie: ${{ secrets.AOC_SESSION }}
-      #     year: 2021
+      - uses: k2bd/advent-readme-stars@v1
+        with:
+          userId: ${{ secrets.AOC_UID }}
+          leaderboardId: ${{ secrets.AOC_LEADERBOARD }}
+          sessionCookie: ${{ secrets.AOC_SESSION }}
+          year: 2021
       - uses: joblo2213/aoc-badges-action@v3
         with:
-          userid: 277540
+          userid: ${{ secrets.AOC_UID }}
           session: ${{ secrets.AOC_SESSION }}
           
 #         Optional inputs:
 #         
           year: 2021
-          leaderboard: 'https://adventofcode.com/2021/leaderboard/private/view/277540.json'               # The url of the leaderboard from witch the data is fetched. Typically your private leaderboard.
+#          leaderboard: 'https://adventofcode.com/2021/leaderboard/private/view/277540.json'               # The url of the leaderboard from witch the data is fetched. Typically your private leaderboard.
 #         file: 'README.md'                                                                              # The file that contains the badges
 #         dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'                   # Regular expression that finds the content of the day badge in your file.
 #         starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'             # Regular expression that finds the content of the stars badge in your file.
