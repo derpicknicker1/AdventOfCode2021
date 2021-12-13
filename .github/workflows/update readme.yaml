@@ -17,7 +17,7 @@ jobs:
       #     year: 2021
       - uses: joblo2213/aoc-badges-action@v3
         with:
-          userid: ${{ secrets.UID }}
+          userid: 277540
           session: ${{ secrets.AOC_SESSION }}
           
 #         Optional inputs:
