@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: k2bd/advent-readme-stars@v1
-        with:
-          userId: ${{ secrets.UID }}
-          leaderboardId: ${{ secrets.AOC_LEADERBOARD }}
-          sessionCookie: ${{ secrets.AOC_SESSION }}
-          year: 2021
+      # - uses: k2bd/advent-readme-stars@v1
+      #   with:
+      #     userId: ${{ secrets.UID }}
+      #     leaderboardId: ${{ secrets.AOC_LEADERBOARD }}
+      #     sessionCookie: ${{ secrets.AOC_SESSION }}
+      #     year: 2021
       - uses: joblo2213/aoc-badges-action@v3
         with:
           userid: ${{ secrets.UID }}
