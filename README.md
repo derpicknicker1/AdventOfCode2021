@@ -11,6 +11,12 @@ The `*.txt` files in `input/` contain the original input for the tasks.
 Use GCC to build `main.c` with the makefile provided.
 
 ![C/C++ CI](https://github.com/derpicknicker1/AdventOfCode2021/workflows/C/C++%20CI/badge.svg)
+
+## Stats
+![](https://img.shields.io/badge/day%20📅-2-blue)
+![](https://img.shields.io/badge/stars%20⭐-4-yellow)
+![](https://img.shields.io/badge/days%20completed-2-red)
+<!--- advent_readme_stars table --->
 ## Building in SublimeText3 (Win)
 
 * Install Mingw
