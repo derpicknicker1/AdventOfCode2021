@@ -161,7 +161,7 @@ static bool getInput(char *f) {
 						else if (!strchr(line, down)) val = 9;
 						else val = 6;
 			}
-			resultB += val * ceil(pow(10, 14-pos%15));
+			resultB += val * pow(10, 14-pos%15);
 		}
 
 		if (pos%15 == 10) 

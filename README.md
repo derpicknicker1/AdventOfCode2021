@@ -54,10 +54,10 @@ To use it, place `AOC.sublime-snippet` in `C:\Users\<UserName>\AppData\Roaming\S
 Auto-generate a release with the workflow found in `.github/workflows/`
 ```
 git tag -a v* -m "My_Msg"
-git push
+git push --tags
 ```
 
-##Main executeable
+## Main executeable
 To solve puzzles, put the input data given by the calendar in a txt file for each day(e.g. `3.txt` for Day 3).
 
 Place the txt files in an fodler called `input`. The folder must be under the same path as the main executeable.

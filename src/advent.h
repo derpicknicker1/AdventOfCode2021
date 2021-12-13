@@ -6,13 +6,14 @@
 #include <time.h>
 #include <limits.h>
 #include <ctype.h>
-//#include <assert.h>
+#include <assert.h>
 
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 #define MIN(x, y) (((x) > (y)) ? (y) : (x))
 #define MAX4(a,b,c,d) ((MAX((a),(b)) > MAX((c),(d))) ? MAX((a),(b)) : MAX((c),(d)))
 #define MIN4(a,b,c,d) ((MIN((a),(b)) < MIN((c),(d))) ? MIN((a),(b)) : MIN((c),(d)))
 #define INRANGE(x, y, z) ((x) >= (y) && (x) <= (z))
+#define COUNT_OF(arr) (sizeof((arr)) / sizeof((arr)[0]))
 #define true 1
 #define false 0
 typedef uint8_t bool;
