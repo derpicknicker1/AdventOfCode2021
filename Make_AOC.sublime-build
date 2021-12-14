@@ -13,6 +13,10 @@
           "shell_cmd": "make && ${folder}/main.exe skip sample"
       },
       {
+          "name": "Benchmark",
+          "shell_cmd": "${folder}/gen.bat"
+      },
+      {
           "name": "Clean",
           "shell_cmd": "make clean"
       }

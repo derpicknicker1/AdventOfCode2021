@@ -21,7 +21,8 @@ src/*.o
 *.sublime-p*
 *.sublime-w*
 *.bk*
-
+hyperfine/**
+benchmark/**
 # Windows shortcuts
 *.lnk
 
