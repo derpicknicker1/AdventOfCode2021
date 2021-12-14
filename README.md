@@ -13,7 +13,7 @@ Use GCC to build `main.c` with the makefile provided.
 ![C/C++ CI](https://github.com/derpicknicker1/AdventOfCode2021/workflows/C/C++%20CI/badge.svg)
 
 ## Stats
-![](https://img.shields.io/badge/day%20📅-13-blue)
+![](https://img.shields.io/badge/day%20📅-14-blue)
 ![](https://img.shields.io/badge/stars%20⭐-26-yellow)
 ![](https://img.shields.io/badge/days%20completed-13-red)
 <!--- advent_readme_stars table --->
