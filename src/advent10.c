@@ -98,11 +98,6 @@ static char *open = "([{<" , *close = ")]}>", line[1000];
 static int resultA = 0, stack[100], points[4] = {3, 57, 1197, 25137}, cntS = 0;
 static long long resultB, sums[100] = {};
 
-static int cmpfunc (const void * a, const void * b) {
-	long long res = *(long long*)a - *(long long*)b;
-	return res < 0 ? -1 : res > 0 ? 1 : 0;
-}
-
 /*##########################
 # Get input data from file #
 ##########################*/
@@ -131,7 +126,7 @@ static bool getInput(char *f) {
 			cntS++;
 		}
 	}
-	qsort(sums, cntS, sizeof(long long int), cmpfunc);
+	qsort(sums, cntS, sizeof(long long), cmpLongAsc);
 	resultB = sums[cntS/2];
 	fclose(file);
 	return true;

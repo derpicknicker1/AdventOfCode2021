@@ -8,25 +8,55 @@
 #include <ctype.h>
 #include <assert.h>
 
+
+/*****************
+ * Helper Makros *
+ *****************/
+// Return bigger number of x, y
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
+// Return smaller number of x, y
 #define MIN(x, y) (((x) > (y)) ? (y) : (x))
+// Return biggest number of a, b, c, d
 #define MAX4(a,b,c,d) ((MAX((a),(b)) > MAX((c),(d))) ? MAX((a),(b)) : MAX((c),(d)))
+// Return smallest number of a, b, c, d
 #define MIN4(a,b,c,d) ((MIN((a),(b)) < MIN((c),(d))) ? MIN((a),(b)) : MIN((c),(d)))
+// Check if x is in range [y..z]
 #define INRANGE(x, y, z) ((x) >= (y) && (x) <= (z))
+// Calculate count of items in array
 #define COUNT_OF(arr) (sizeof((arr)) / sizeof((arr)[0]))
+// Boolean integration
 #define true 1
 #define false 0
 typedef uint8_t bool;
 
-// Helper
-int toI(char *s);
-char *ltrim(char *s);
-char *rtrim(char *s);
-char *trim(char *s);
-int isDigit(char c);
-int isHexDigit(char c);
-int gauss(int n);
 
+/************************
+ * Helper from helper.c *
+ ************************/
+// Convert string to integer
+int toI(char *s);
+// Remove whitespace from beginning of a string
+char *ltrim(char *s);
+// Remove whitespace from end of a string
+char *rtrim(char *s);
+// Remove whitespace from beginning and end of a string
+char *trim(char *s);
+// check if a char is a digit (0-9)
+int isDigit(char c);
+// check if a char is a hexadecimal digit (0-9,a-f,A-F)
+int isHexDigit(char c);
+// sum of numbers [1..n]
+int gauss(int n);
+// Some compare functions for quick sort
+int cmpLongDesc (const void * a, const void * b);
+int cmpLongAsc (const void * a, const void * b);
+int cmpIntDesc (const void * a, const void * b);
+int cmpIntAsc (const void * a, const void * b);
+
+
+/*************************************
+ * Methods for solving daily puzzles *
+ *************************************/
 // Day 0 EXAMPLE
 void get0a(char *f);
 void get0b(char *f);

@@ -114,10 +114,6 @@ static int follow(unsigned int y, unsigned int x) {
 	return ret + 1;
 }
 
-static int cmpfunc (const void * a, const void * b) {
-   return ( *(int*)b - *(int*)a );
-}
-
 static void solve() {
 	int cntBas = 0, *bas = NULL;
 	for (int y = 0; y < height; y++)
@@ -127,7 +123,7 @@ static void solve() {
 				bas = realloc(bas, ++cntBas*sizeof(int));
 				bas[cntBas-1] = follow(y,x);
 			}
-	qsort(bas, cntBas, sizeof(int), cmpfunc);
+	qsort(bas, cntBas, sizeof(int), cmpIntDesc);
 	resultB = bas[0] * bas[1] * bas[2]; 
 	free(bas);
 }

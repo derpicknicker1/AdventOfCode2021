@@ -4,6 +4,24 @@ int gauss(int n) {
 	return ((n*n)+n)/2;
 }
 
+int cmpLongDesc (const void * a, const void * b) {
+	long long res = *(long long*)a - *(long long*)b;
+	return res < 0 ? 1 : res > 0 ? -1 : 0;
+}
+
+int cmpLongAsc (const void * a, const void * b) {
+	long long res = *(long long*)a - *(long long*)b;
+	return res < 0 ? -1 : res > 0 ? 1 : 0;
+}
+
+int cmpIntDesc (const void * a, const void * b) {
+   return ( *(int*)b - *(int*)a );
+}
+
+int cmpIntAsc (const void * a, const void * b) {
+   return ( *(int*)a - *(int*)b );
+}
+
 int toI(char *s) {
 	int sum = 0, min = false;
 	if(*s == '-') {
@@ -34,13 +52,9 @@ char *trim(char *s) {
 }
 
 int isDigit(char c) {
-	if(c >= 48 && c <= 57)
-		return true;
-	return false;
+	return (c >= '0' && c <= '9');
 }
 
 int isHexDigit(char c) {
-	if( isDigit(c) || (c >= 97 && c <= 102))
-		return true;
-	return false;
+	return (isDigit(c) || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F'));
 }
