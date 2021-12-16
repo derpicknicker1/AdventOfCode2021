@@ -40,7 +40,7 @@ Use GCC to build `main.c` with the makefile provided.
 <!--- advent_readme_stars table --->
 
 ## Benchmarks
-Done with [hyperfine](https://github.com/sharkdp/hyperfine) (see file `gen.bat`)
+Done with [hyperfine](https://github.com/sharkdp/hyperfine) (see file `benchmark.bat`)
 | Command | Mean [ms] | Min [ms] | Max [ms] | Relative |
 |:---|---:|---:|---:|---:|
 | `benchmark\adv1.exe` | 9.0 ± 0.7 | 8.2 | 12.3 | 1.09 ± 0.13 |

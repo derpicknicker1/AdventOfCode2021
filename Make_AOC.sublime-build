@@ -14,7 +14,7 @@
       },
       {
           "name": "Benchmark",
-          "shell_cmd": "${folder}/gen.bat"
+          "shell_cmd": "${folder}/benchmark.bat"
       },
       {
           "name": "Clean",
