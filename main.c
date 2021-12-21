@@ -57,8 +57,8 @@ int main(int argc, char* argv[]) {
 	execute(18)
 	execute(19) */
 	execute(20)
-	/*execute(21)
-	execute(22)
+	execute(21)
+	/*execute(22)
 	execute(23)
 	execute(24)
 	execute(25)
