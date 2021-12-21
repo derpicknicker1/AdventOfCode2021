@@ -15,7 +15,7 @@ Use GCC to build `main.c` with the makefile provided.
 ![GitHub repo size](https://img.shields.io/github/repo-size/derpicknicker1/AdventOfCode2021)
 #### Stats
 ![](https://img.shields.io/badge/day%20📅-21-blue)
-![](https://img.shields.io/badge/stars%20⭐-33-yellow)
+![](https://img.shields.io/badge/stars%20⭐-34-yellow)
 ![](https://img.shields.io/badge/days%20completed-16-red)
 
 <!--- advent_readme_stars table --->
@@ -40,6 +40,7 @@ Use GCC to build `main.c` with the makefile provided.
 | [Day 15](https://adventofcode.com/2021/day/15) | ⭐ | ⭐ |
 | [Day 17](https://adventofcode.com/2021/day/17) | ⭐ |   |
 | [Day 20](https://adventofcode.com/2021/day/20) | ⭐ | ⭐ |
+| [Day 21](https://adventofcode.com/2021/day/21) | ⭐ |   |
 <!--- advent_readme_stars table --->
 
 ## Benchmarks
