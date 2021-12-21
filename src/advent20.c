@@ -158,25 +158,17 @@ static void solve() {
 	int result;
 	for (int i = 0; i < rounds; i++) {
 		result = 0;
-		int lb = offset-i-1;
-		int ub = offset+items+i+2;
-		for (int y = lb; y < ub-1; y++)
-			for (int x = lb; x < ub-1; x++) {
+		for (int y = 1; y < mSize-1; y++)
+			for (int x = 1; x < mSize-1; x++) {
 				newMap[y][x] = getVal(y,x);
 				result += newMap[y][x];
 			}
-		for (int j = lb-1; j < ub; j++) {
-			newMap[lb-1][j] = getVal(1,1);
-			newMap[ub][j] = getVal(1,1);
-			newMap[j][lb-1] = getVal(1,1);
-			newMap[j][ub] = getVal(1,1);
+		for (int j = 0; j < mSize; j++) {
+			newMap[0][j] = getVal(1,1);
+			newMap[mSize-1][j] = getVal(1,1);
+			newMap[j][0] = getVal(1,1);
+			newMap[j][mSize-1] = getVal(1,1);
 		}
-		// result = 0;
-		// for (int y = lb; y < ub-1; y++)
-		// 	for (int x = lb; x < ub-1; x++) {
-		// 		result += newMap[y][x];
-		// 	}
-
 		memcpy(map, newMap, mSize*mSize*sizeof(bool));
 		if (i == 1) resultA = result;
 	}
