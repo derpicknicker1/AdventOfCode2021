@@ -211,10 +211,10 @@ static uint64_t solve(bool big) {
 	int cubes[5000][7] = {{}}, ncubes[500][7] = {{}}, pos = 0;
 	uint64_t hsh[5000] = {}, result = 0;
 
-	for (int i = 0; i < cnt; i++){
+	for (int i = 0; i < cnt; i++) {
 		int npos = 0;
-		if(big || (arr[i][0] >=-50 && arr[i][1] <= 50)) {
-			for (int j = 0; j < pos; j++){
+		if (big || (arr[i][0] >=-50 && arr[i][1] <= 50)) {
+			for (int j = 0; j < pos; j++) {
 				int n[7] = {
 					MAX(arr[i][0],cubes[j][0]),
 					MIN(arr[i][1],cubes[j][1]),
@@ -231,7 +231,7 @@ static uint64_t solve(bool big) {
 			if (arr[i][6] > 0)
 				memcpy(cubes[pos++], arr[i], 7*sizeof(int));
 		
-			for (int j = 0; j < npos; j++){
+			for (int j = 0; j < npos; j++) {
 				uint64_t h = iHash(ncubes[j], 6);
 				bool add = true;
 				for (int k = 0; k < pos; k++) {
