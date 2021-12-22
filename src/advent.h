@@ -47,6 +47,10 @@ int isDigit(char c);
 int isHexDigit(char c);
 // sum of numbers [1..n]
 int gauss(int n);
+// calc Hash of an integer(-array)
+uint64_t iHash(int *val, int cnt);
+// calc Hash of an char(-array)
+uint64_t sHash(char *val, int cnt);
 // Some compare functions for quick sort
 int cmpLongDesc (const void * a, const void * b);
 int cmpLongAsc (const void * a, const void * b);

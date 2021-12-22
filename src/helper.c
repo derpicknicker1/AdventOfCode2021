@@ -58,3 +58,17 @@ int isDigit(char c) {
 int isHexDigit(char c) {
 	return (isDigit(c) || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F'));
 }
+
+uint64_t iHash(int *val, int cnt) {
+	uint64_t result = 5381;
+	for(int i = 0; i < cnt; i++)
+		result = ((result << 5) + result) + val[i];
+	return result;
+}
+
+uint64_t sHash(char *val, int cnt) {
+	uint64_t result = 5381;
+	for(int i = 0; i < cnt; i++)
+		result = ((result << 5) + result) + val[i];
+	return result;
+}
