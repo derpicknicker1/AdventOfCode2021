@@ -1,23 +1,25 @@
 #include "advent.h"
 
-#define execute(s) 	printf("Solving %d...\n", s); 	\
-					fflush(stdout); 				\
-					strcpy(path,folder);            \
-					strcat(path, "/" #s ".txt");    \
-					get##s##a(path); 	            \
-					get##s##b(path);	            \
-					getTime(s);
+#define execute(s) 	printf("Solving %d...\n", s); 			\
+					fflush(stdout); 						\
+					strcpy(path,folder);            		\
+					strcat(path, "/" #s ".txt");    		\
+					clock_gettime(CLOCK_MONOTONIC, &begin); \
+					get##s##a(path); 	            		\
+					get##s##b(path);	            		\
+					clock_gettime(CLOCK_MONOTONIC, &end); 	\
+					showTime(s);
 
 
-struct timespec begin, beginAll, end;
+struct timespec begin, end;
+double timeAll = 0;
 char folder[10], path[20];
 bool sample = false, skip = false;
 
-void getTime(int i) {
-	clock_gettime(CLOCK_MONOTONIC, &end);
+void showTime(int i) {
 	double time = (end.tv_nsec-begin.tv_nsec)/1000000000.0+(end.tv_sec-begin.tv_sec);
+	timeAll += time;
 	printf("Runtime %d: %f\n_______________________________\n\n", i, time);
-	clock_gettime(CLOCK_MONOTONIC, &begin);
 }					
 
 int main(int argc, char* argv[]) {
@@ -32,9 +34,6 @@ int main(int argc, char* argv[]) {
 		
 	
 	printf("\n\n#################\n### Solutions ###\n#################\n\n");
-
-	clock_gettime(CLOCK_MONOTONIC, &beginAll);
-	clock_gettime(CLOCK_MONOTONIC, &begin);
 	
 	// execute(0) // EXAMPLE
 	execute(1)
@@ -63,8 +62,7 @@ int main(int argc, char* argv[]) {
 	/*execute(24)
 	execute(25)
 	*/
-	double time = (end.tv_nsec-beginAll.tv_nsec)/1000000000.0+(end.tv_sec-beginAll.tv_sec);
-	printf("Overall Runtime: %f\n_______________________________\n", time);
+	printf("Overall Runtime: %f\n_______________________________\n", timeAll);
 	#if defined(_WIN32) || defined(_WIN64)
 	if (!skip)
 		system("Pause");

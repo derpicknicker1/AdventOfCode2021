@@ -128,7 +128,6 @@ Your puzzle answer was 5059.
 */
 #include "advent.h"
 
-
 static int xb, xe, yb, ye;
 
 /*##########################
@@ -142,9 +141,7 @@ static bool getInput(char *f) {
 		return false;
 	}
 
-	while (fscanf(file, "target area: x=%d..%d, y=%d..%d", &xb, &xe, &yb, &ye) != EOF) {
-	
-	}
+	fscanf(file, "target area: x=%d..%d, y=%d..%d", &xb, &xe, &yb, &ye);
 
 	fclose(file);
 	return true;
