@@ -59,8 +59,8 @@ int main(int argc, char* argv[]) {
 	execute(20)
 	execute(21)
 	execute(22)
-	/*execute(23)
-	execute(24)
+	execute(23)
+	/*execute(24)
 	execute(25)
 	*/
 	double time = (end.tv_nsec-beginAll.tv_nsec)/1000000000.0+(end.tv_sec-beginAll.tv_sec);
