@@ -60,8 +60,8 @@ int main(int argc, char* argv[]) {
 	execute(22)
 	execute(23)*/
 	execute(24)
-	/*execute(25)
-	*/
+	execute(25)
+	
 	printf("Overall Runtime: %f\n_______________________________\n", timeAll);
 	#if defined(_WIN32) || defined(_WIN64)
 	if (!skip)
